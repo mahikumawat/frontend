@@ -14,7 +14,7 @@ export default function EnquiryList({ data, getAllData, Swal, setFormData }) {
 
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:3000/api/website/enquery/delete/${delId}`)
+        axios.delete(`https://nodejs-b6fl.onrender.com/api/website/enquery/delete/${delId}`)
           .then((res) => {
             Swal.fire("Deleted", "", "success");
             getAllData();
@@ -26,7 +26,7 @@ export default function EnquiryList({ data, getAllData, Swal, setFormData }) {
 
   let editRow = (editId) => {
 
-    axios.get(`http://localhost:3000/api/website/enquery/single/${editId}`)
+    axios.get(`https://nodejs-b6fl.onrender.com/api/website/enquery/single/${editId}`)
       .then((res) => {
         let data = res.data
         setFormData(data.enquery);

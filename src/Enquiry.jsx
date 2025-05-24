@@ -23,7 +23,7 @@ export default function Enquiry() {
     e.preventDefault()
 
     if (formData._id) {
-      axios.put(`http://localhost:3000/api/website/enquery/update/${formData._id}`, formData)
+      axios.put(`https://nodejs-b6fl.onrender.com/api/website/enquery/update/${formData._id}`, formData)
         .then((res) => {
           setFormData({
             name: '',
@@ -36,7 +36,7 @@ export default function Enquiry() {
         })
 
     } else {
-      axios.post(`http://localhost:3000/api/website/enquery/insert`, formData)
+      axios.post(`https://nodejs-b6fl.onrender.com/api/website/enquery/insert`, formData)
         .then((res) => {
           setFormData({
             name: '',
@@ -73,7 +73,7 @@ export default function Enquiry() {
 
 
   let getAllData = () => {
-    axios.get(`http://localhost:3000/api/website/enquery/view`)
+    axios.get(`https://nodejs-b6fl.onrender.com/api/website/enquery/view`)
       .then((res) => {
         return res.data;
       })
